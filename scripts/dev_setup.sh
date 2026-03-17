@@ -38,4 +38,4 @@ echo "✅ Dependencies installed."
 
 mvn clean -DskipTests install
 
-echo "You can start the server with 'mvn jetty:run' and then access it at http://localhost:8080/docs-web/src/"
+echo "You can start the server with 'mvn jetty:run' and then access it at http://localhost:8080/"

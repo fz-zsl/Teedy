@@ -104,5 +104,10 @@
     <url-pattern>/api/*</url-pattern>
   </servlet-mapping>
   
+  <!-- Welcome files -->
+  <welcome-file-list>
+    <welcome-file>src</welcome-file>
+  </welcome-file-list>
+  
   <absolute-ordering/>
 </web-app>
