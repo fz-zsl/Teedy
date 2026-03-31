@@ -70,6 +70,13 @@
     <tag>HEAD</tag>
   </scm>
 
+  <distributionManagement>
+    <site>
+      <id>site</id>
+      <url>file:${project.build.directory}/site</url>
+    </site>
+  </distributionManagement>
+
   <repositories>
     <repository>
       <id>ApacheSnapshot</id>
@@ -115,6 +122,22 @@
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-maven-plugin</artifactId>
         <version>${org.eclipse.jetty.jetty-maven-plugin.version}</version>
+      </plugin>
+
+      <!-- Site generation plugins -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.12.1</version>
+        <configuration>
+          <reportPlugins>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-project-info-reports-plugin</artifactId>
+              <version>3.4.1</version>
+            </plugin>
+          </reportPlugins>
+        </configuration>
       </plugin>
     </plugins>
   </build>
