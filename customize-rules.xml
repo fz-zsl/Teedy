@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Teedy Custom PMD Ruleset"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+  <description>Custom PMD ruleset for Teedy focused on core code quality metrics.</description>
+
+  <!-- Lines of code -->
+  <rule ref="category/java/design.xml/NcssCount" />
+
+  <!-- Cyclomatic complexity -->
+  <rule ref="category/java/design.xml/CyclomaticComplexity" />
+
+  <!-- Weighted methods per class -->
+  <rule ref="category/java/design.xml/GodClass" />
+
+  <!-- Coupling between objects -->
+  <rule ref="category/java/design.xml/CouplingBetweenObjects" />
+
+  <!-- Lack of cohesion in methods -->
+  <rule ref="category/java/design.xml/DataClass" />
+</ruleset>
