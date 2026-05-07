@@ -63,7 +63,6 @@ public class AuthenticationTokenDao {
      * Deletes old short lived tokens.
      *
      * @param userId User ID
-     * @throws Exception
      */
     public void deleteOldSessionToken(String userId) {
         StringBuilder sb = new StringBuilder("delete from T_AUTHENTICATION_TOKEN AS ato ");
@@ -79,10 +78,9 @@ public class AuthenticationTokenDao {
     }
 
     /**
-     * Deletes old short lived tokens.
+     * Updates last connection date of a token.
      *
      * @param id Token id
-     * @throws Exception
      */
     public void updateLastConnectionDate(String id) {
         StringBuilder sb = new StringBuilder("update T_AUTHENTICATION_TOKEN ato ");
@@ -99,8 +97,8 @@ public class AuthenticationTokenDao {
     /**
      * Returns all authentication tokens of an user.
      * 
-     * @param userId
-     * @return
+     * @param userId User ID
+     * @return List of authentication tokens
      */
     @SuppressWarnings("unchecked")
     public List<AuthenticationToken> getByUserId(String userId) {
@@ -111,9 +109,10 @@ public class AuthenticationTokenDao {
     }
     
     /**
-     * Deletes all authentication tokens of an user.
+     * Deletes all authentication tokens of an user except one.
      * 
-     * @param userId
+     * @param userId User ID
+     * @param id Token ID to keep
      */
     public void deleteByUserId(String userId, String id) {
         EntityManager em = ThreadLocalContext.get().getEntityManager();

@@ -54,42 +54,93 @@ public class Acl implements Loggable {
     @Column(name = "ACL_DELETEDATE_D")
     private Date deleteDate;
     
+    /**
+     * Get ACL ID.
+     *
+     * @return ACL ID
+     */
     public String getId() {
         return id;
     }
 
+    /**
+     * Set ACL ID.
+     *
+     * @param id ACL ID
+     */
     public void setId(String id) {
         this.id = id;
     }
 
+    /**
+     * Get ACL permission.
+     *
+     * @return ACL permission
+     */
     public PermType getPerm() {
         return perm;
     }
 
+    /**
+     * Set ACL permission.
+     *
+     * @param perm ACL permission
+     */
     public void setPerm(PermType perm) {
         this.perm = perm;
     }
 
+    /**
+     * Get ACL source ID.
+     *
+     * @return ACL source ID
+     */
     public String getSourceId() {
         return sourceId;
     }
 
+    /**
+     * Set ACL source ID.
+     *
+     * @param sourceId ACL source ID
+     */
     public void setSourceId(String sourceId) {
         this.sourceId = sourceId;
     }
 
+    /**
+     * Get ACL target ID.
+     *
+     * @return ACL target ID
+     */
     public String getTargetId() {
         return targetId;
     }
 
+    /**
+     * Set ACL target ID.
+     *
+     * @param targetId ACL target ID
+     */
     public void setTargetId(String targetId) {
         this.targetId = targetId;
     }
 
+    /**
+     * Get ACL type.
+     *
+     * @return ACL type
+     */
     public AclType getType() {
         return type;
     }
 
+    /**
+     * Set ACL type.
+     *
+     * @param type ACL type
+     * @return this Acl
+     */
     public Acl setType(AclType type) {
         this.type = type;
         return this;
@@ -100,6 +151,11 @@ public class Acl implements Loggable {
         return deleteDate;
     }
 
+    /**
+     * Set deletion date.
+     *
+     * @param deleteDate Deletion date
+     */
     public void setDeleteDate(Date deleteDate) {
         this.deleteDate = deleteDate;
     }

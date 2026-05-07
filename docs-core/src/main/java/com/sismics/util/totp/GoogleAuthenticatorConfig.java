@@ -82,10 +82,11 @@ public class GoogleAuthenticatorConfig {
      * account for differences between the server and the client clocks. The
      * bigger the window, the more tolerant the library code is about clock
      * skews.
-     * <p/>
+     * <p>
      * We are using Google's default behaviour of using a window size equal to
      * 3. The limit on the maximum window size, present in older versions of
      * this library, has been removed.
+     * </p>
      *
      * @return the window size.
      * @see #timeStepSizeInMillis
